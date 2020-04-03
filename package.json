@@ -4,7 +4,7 @@
   "description": "Vanilla Box Test Environment",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "server": "webpack-dev-server"
   },
   "author": "Marek Lints",
   "license": "MIT",
