@@ -1,0 +1,18 @@
+{
+  "name": "vanilla-box-sandbox",
+  "version": "1.0.0",
+  "description": "Vanilla Box Test Environment",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "author": "Marek Lints",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "css-loader": "^3.4.2",
+    "style-loader": "^1.1.3"
+  }
+}
