@@ -42,6 +42,8 @@ window.addEventListener('load', () => {
 
     configmanager.addConfig('blank_90pct_50pct', {
         top: 0,
+        appearFrom: 'right',
+        isFixed: false,
         width: '90%',
         height: '50%',
         displayCloseButton: true,
@@ -69,6 +71,8 @@ window.addEventListener('load', () => {
 
     configmanager.addConfig('blank_300px_100pct', {
         top: 0,
+        appearFrom: 'left',
+        isFixed: true,
         dimensionClass: 'popup-blank-300px-100pct',
         displayCloseButton: true,
         coverBackground: 'white',
