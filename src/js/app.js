@@ -98,4 +98,32 @@ window.addEventListener('load', () => {
     `;
     document.querySelector('#test4 button').addEventListener('click', () => document.querySelector('#test4 popup-window').open());
 
+    configmanager.addConfig('blank_100pct_200px', {
+        top: 0,
+        appearFrom: 'top',
+        isFixed: true,
+        height: '200px',
+        background: 'lightgreen',
+        displayCloseButton: true,
+        coverBackground: 'white',
+        coverOpacity: '90%',
+        coverCloseOnClick: true
+    });
+    document.querySelector('#test5').innerHTML = /*html*/`
+        <popup-window config-name="blank_100pct_200px">
+        <template>
+            <div>
+                <h1>Test www</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, provident vero corrupti dolore
+                    pariatur consequatur neque dolor eveniet ut voluptas voluptates voluptatibus, laudantium sequi non
+                    omnis
+                    tempora cum mollitia minima?
+                </p>
+            </div>
+        </template>
+        </popup-window>
+        <button class="btn btn-primary">Open</button>
+    `;
+    document.querySelector('#test5 button').addEventListener('click', () => document.querySelector('#test5 popup-window').open());
 });
