@@ -2,6 +2,7 @@ import '@marek.lints/vanilla-box/popup.css';
 import '@marek.lints/vanilla-box/config.css';
 import { configmanager } from '@marek.lints/vanilla-box';
 import '../css/app.css';
+import '../img/background.jpg';
 
 window.addEventListener('load', () => {
     document.querySelector('#test1').innerHTML = /*html*/`
@@ -150,4 +151,31 @@ window.addEventListener('load', () => {
         <button class="btn btn-primary">Open</button>
     `;
     document.querySelector('#test6 button').addEventListener('click', () => document.querySelector('#test6 popup-window').open());
+
+    configmanager.addConfig('blank_300_300_background', {
+        top: 25,
+        appearFrom: 'center',
+        isFixed: false,
+        cssClass: 'popup-300-300',
+        displayCloseButton: true,
+        coverBackgroundImage: '/dist/img/background.jpg',
+        coverOpacity: '100%',
+        coverCloseOnClick: false
+    });
+    document.querySelector('#test7').innerHTML = /*html*/`
+        <popup-window config-name="blank_300_300_background">
+        <template>
+            <div>
+                <h1>Authentication</h1>
+                <input type="text" class="form-control" placeholder="Username"><br>
+                <input type="password" class="form-control" placeholder="Password"><br>
+                <input type="button" class="btn btn-secondary" value="Login">
+            </div>
+        </template>
+        </popup-window>
+        <button class="btn btn-primary">Login</button>
+    `;
+    document.querySelector('#test7 button').addEventListener('click', () => document.querySelector('#test7 popup-window').open());
+
+
 });
