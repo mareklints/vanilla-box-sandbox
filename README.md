@@ -14,6 +14,8 @@ git clone https://github.com/mareklints/vanilla-box-sandbox.git
 
 cd vanilla-box-sandbox/
 
+npm install
+
 npm run server
 ```
 
